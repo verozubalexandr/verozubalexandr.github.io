@@ -1,0 +1,1099 @@
+div, h1, h2, h3, p, span, li, a, button, input, select
+    font-family: 'Roboto', sans-serif
+    font-weight: 300
+
+    html
+    scroll-behavior: smooth
+
+.container
+    width: 1000px
+    margin: 0 auto
+
+.header
+    position: fixed
+    top: 0
+    width: 100%
+    z-index: 2
+    .header_contacts
+        height: 40px
+        background-color: #05233b
+        width: 100%
+        &_wrapper
+            padding-top: 9px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            .main_contacts
+                width: 55%
+                display: flex
+                justify-content: space-between
+                align-items: center
+                &_item>a
+                    color: #dedcdb
+                    text-decoration: none
+                    font-weight: 300
+                    font-size: 10px
+                    transition: 0.3s all
+                    &>i
+                        margin-right: 5px
+                    &:hover
+                        color: #16a086
+            .header_social
+                width: 10%
+                display: flex
+                justify-content: space-between
+                align-items: center
+                &_item>a
+                    color: #dedcdb
+                    text-decoration: none
+                    font-weight: 300
+                    font-size: 10px
+                    transition: 0.3s all
+                    &:hover
+                        color: #16a086
+    .header_navigation
+        z-index: -1
+        display: flex
+        position: absolute
+        top: -90px
+        left: 0
+        width: 100%
+        height: 90px
+        background-color: #fff
+        align-items: center
+        transition: 0.3s all
+        .header_wrapper
+            display: flex
+            justify-content: space-between
+            align-items: center
+            .logo_img
+                width: 90%
+                transition: .4s all
+                &:hover
+                    width: 93%
+            .navbar
+                width: 60%
+                .navbar_menu
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    list-style-type: none
+                    .navbar_menu_item
+                        .navbar_menu_link
+                            color: #5b5b5b
+                            text-decoration: none
+                            font-weight: 500
+                            font-size: 13px
+                            transition: .4s all
+                            &:hover
+                                color: #16a086
+    .dropdown_arrow
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: 0 auto
+        width: 40px
+        height: 25px
+        >i
+            display: block
+            top: 46px
+            font-size: 20px
+            color: #139a81
+        &:hover
+            .header_navigation
+                    top: 40px
+            >i
+                color: #ffffff00
+                
+.promo
+    margin-top: 0px
+    min-height: 380px
+    background: url('../img/main_bg.jpg') center center/cover no-repeat
+    padding-top: 120px
+    &_title
+        text-align: center
+        font-weight: 700
+        text-transform: uppercase
+        color: #fff
+        font-size: 55px
+    &_subtitle
+        margin-top: 20px
+        text-align: center
+        font-weight: 300
+        color: #fff
+        font-size: 33px
+    &_btn_wrapper
+        margin-top: 80px
+        display: flex
+        justify-content: center
+        .promo_project_btn
+            margin: 0 5px
+            width: 170px
+            height: 45px
+            border: none
+            border-radius: 1px
+            outline: none
+            background-color: #fff
+            text-transform: uppercase
+            color: #5b5b5b
+            font-size: 14px
+            font-weight: 400
+            transition: .3s all
+            &:hover
+                color: #fff
+                background-color: #139a81
+        .promo_more_btn
+            margin: 0 5px
+            width: 170px
+            height: 45px
+            border: none
+            border-radius: 1px
+            outline: none
+            background-color: #fff
+            text-transform: uppercase
+            color: #5b5b5b
+            font-size: 14px
+            font-weight: 400
+            transition: .3s all
+            &:hover
+                color: #fff
+                background-color: #139a81
+.services
+    min-height: 430px
+    background-color: #fff
+    padding-top: 80px
+    &_title
+        text-align: center
+        font-weight: 700
+        font-size: 35px
+        color: #333333
+        &::after
+            content: " "
+            display: block
+            margin: 10px auto
+            height: 3px
+            width: 90px
+            background-color: #333333
+    .services_cards_wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 55px
+        .services_card
+            width: 320px
+            height: 220px
+            background-color: #05233b
+            &_img
+                width: 100%
+            &_title
+                margin: 0
+                margin-top: 12px
+                margin-left: 22px
+                font-weight: 400
+                color: #fff
+                font-size: 16px
+            &_subtitle
+                margin-top: 10px
+                margin-left: 22px
+                color: #dedcdb
+                font-weight: 300
+                font-size: 10px
+.reasons 
+    min-height: 410px
+    background-color: #f5f5f5
+    padding-top: 80px
+    &_title
+        text-align: center
+        font-weight: 700
+        font-size: 35px
+        color: #333333
+        &::after
+            content: " "
+            display: block
+            margin: 10px auto
+            height: 3px
+            width: 90px
+            background-color: #333333
+    .reasons_cards_wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        margin-top: 45px
+        .reasons_card
+            width: 227px
+            height: 230px
+            border: 1px solid #d7d7d7
+            transition: .5s all
+            &_btn
+                display: none
+                margin: 20px auto
+                width: 140px
+                height: 35px
+                border: none
+                border-radius: 1px
+                outline: none
+                background-color: #fff
+                text-transform: uppercase
+                color: #5b5b5b
+                font-size: 14px
+                font-weight: 400
+                transition: .3s all
+                &:hover
+                    color: #fff
+                    background-color: #5b5b5b
+            &_subtitle
+                display: none
+                margin-top: 10px
+                margin-left: 22px
+                color: #fff
+                font-weight: 300
+                font-size: 10px
+                line-height: 17px
+                text-align: center
+            >i
+                width: 100%
+                text-align: center
+                font-size: 80px
+                color: #16a086
+                margin-top: 50px
+            &_title
+                margin-top: 20px
+                text-align: center
+                font-weight: 500
+                text-transform: uppercase
+                font-size: 15px
+                color: #555555
+            &:hover   
+                background-color: #16a086
+                >i
+                    font-size: 50px
+                    color: #fff
+                    margin-top: 17px
+                .reasons_card_title
+                    margin-top: 20px
+                    color: #fff
+                .reasons_card_subtitle
+                    display: block
+                .reasons_card_btn
+                    display: block
+.form
+    box-sizing: border-box
+    padding-top: 70px
+    min-height:  235px
+    background-color: #05233b
+    .form_line_wrapper
+        margin-top: 5px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        .form_title
+            width: 31%
+            font-weight: 700
+            font-size: 30px
+            color: #fff
+            &::after
+                content: " "
+                display: block
+                margin: 10px 0
+                height: 3px
+                width: 90px
+                background-color: #fff
+        .form_subtitle
+            width: 31%
+            color: #dedcdb
+            font-weight: 300
+            font-size: 10px
+        input
+            margin-left: 20px
+            width: 27%
+            height: 29px
+            padding-left: 12px
+            outline: 0
+            &::placeholder
+                color: #707070
+                font-weight: 400
+                font-size: 10px
+        select
+            outline: none
+            margin-left: 20px
+            width: calc(27% + 18px)
+            height: 33px
+            padding-left: 12px
+            color: #707070
+            font-weight: 400
+            font-size: 10px
+            option
+                &:first-child
+                    display: none
+        #submit
+            padding: 0
+            padding-top: 2px
+            height: 32px
+            width: 100px
+            border: none
+            border-radius: 1px
+            outline: none
+            color: #fff
+            background-color: #139a81
+            text-transform: uppercase
+            font-size: 10px
+            font-weight: 400
+            transition: .3s all
+            &:hover
+                background-color: #fff
+                color: #5b5b5b
+.projects
+    position: relative
+    min-height: 430px
+    background-color: #f5f5f5
+    padding-top: 80px
+    .projects_title
+        text-align: center
+        font-weight: 700
+        font-size: 35px
+        color: #333333
+        &::after
+            content: " "
+            display: block
+            margin: 10px auto
+            height: 3px
+            width: 90px
+            background-color: #333333
+    .projects_cards_wrapper
+        margin-top: 55px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        .project_card
+            position: relative
+            width: 320px
+            height: 245px
+            overflow: hidden
+            transition: 0.3s all
+            &:nth-child(1)
+                background: url("../img/projects/card_img1.jpg") center center/cover no-repeat
+            &:nth-child(2)
+                background: url("../img/projects/card_img2.jpg") center center/cover no-repeat
+            &:nth-child(3)
+                background: url("../img/projects/card_img3.jpg") center center/cover no-repeat
+            &_mask
+                display: none 
+            &_footer
+                box-sizing: border-box
+                padding: 0 10%
+                position: relative
+                top: 80%
+                height: 100%
+                width: 100%
+                background-color: #05233bc7
+                overflow: hidden
+                transition: 0.3s all
+                >h2
+                    font-weight: 400
+                    color: #fff
+                    font-size: 16px
+            .project_card_subtitle
+                margin-top: 12px
+                color: #dedcdb
+                font-weight: 300
+                font-size: 10px
+                line-height: 20px
+            .project_card_btn
+                margin-top: 20px
+                width: 105px
+                height: 25px
+                border: none
+                border-radius: 1px
+                outline: none
+                background-color: #fff
+                text-transform: uppercase
+                color: #5b5b5b
+                font-size: 12px
+                font-weight: 400
+                transition: .3s all
+                &:hover
+                    color: #fff
+                    background-color: #139a81
+            &:hover
+                .project_card_footer
+                    top: 0
+                    height: 100%
+                    background-color: #05233bc7
+                >h2
+                    display: none
+.numbers
+    height: 160px
+    background: url('../img/nums_bg.jpg') center center/cover no-repeat
+    .nums_wrapper
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        .nums_item
+            margin: 0 90px
+            margin-top: 50px
+            width: 12%
+            text-align: center
+            .num
+                color: #fff
+                font-weight: 500
+                font-size: 45px
+            .num_subtitle
+                color: #fff
+                text-transform: uppercase
+                font-size: 13px
+.news
+    padding-top: 80px
+    box-sizing: border-box
+    min-height: 630px
+    background-color: #f5f5f5
+    .news_title
+        text-align: center
+        font-weight: 700
+        font-size: 35px
+        color: #333333
+        &::after
+            content: " "
+            display: block
+            margin: 10px auto
+            height: 3px
+            width: 90px
+            background-color: #333333
+    .news_cards_wrapper
+        margin-top: 55px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        .news_card
+            width: 320px
+            height: 350px
+            background-color: #fff
+            img
+                width: 100%
+            .news_card_title
+                margin-top: 17px
+                padding: 0 20px
+                font-weight: 700
+                color: #333333
+                font-size: 15px
+            .news_card_navbar
+                margin-top: 13px
+                padding: 0 20px
+                display: flex
+                justify-self: flex-start
+                align-items: center
+                .news_card_navbar_date
+                    font-size: 11px
+                    font-weight: 400
+                    color: #787878
+                .news_card_navbar_user
+                    display: flex
+                    justify-content: start
+                    align-items: center
+                    &::before
+                        content: " "
+                        display: block
+                        margin: 0 15px
+                        height: 16px
+                        width: .4px
+                        background-color: #939393
+                    a
+                        text-decoration: none
+                        font-size: 11px
+                        font-weight: 400
+                        color: #139a81
+                        transition: .3s all
+                        &:hover
+                            color: #787878
+                            i
+                                color: #139a81
+                        i
+                            transition: .3s all 
+                            color: #787878
+            .news_card_subtitle
+                margin-top: 12px
+                line-height: 18px
+                padding: 0 10px 0 20px
+                font-size: 11px
+                font-weight: 400
+                color: #787878
+            .news_card_btn
+                margin-top: 18px
+                margin-left: 19px
+                width: 100px
+                height: 25px
+                border: none
+                border-radius: 1px
+                outline: none
+                background-color: #139a81
+                text-transform: uppercase
+                color: #fff
+                font-size: 12px
+                font-weight: 400
+                transition: .3s all
+                &:hover
+                    color: #5b5b5b
+                    background-color: #fff
+.partners
+    min-height: 300px
+    background-color: #fff
+    padding-top: 75px
+    .partners_title
+        text-align: center
+        font-weight: 700
+        font-size: 35px
+        color: #333333
+        &::after
+            content: " "
+            display: block
+            margin: 10px auto
+            height: 3px
+            width: 90px
+            background-color: #333333
+    .partners_wrapper
+        margin-top: 40px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        .partners_logo_item
+            width: 140px
+            height: 140px
+            >a >img
+                    width: 90%
+                    transition: .3s all
+                    &:hover
+                        width: 100%
+.testimonials
+    padding-top: 80px
+    height: 430px
+    background: url('../img/testimonials/testimonials_bg.jpg') center center/cover no-repeat
+    .testimonials_title
+        text-align: center
+        font-weight: 700
+        font-size: 35px
+        color: #fff
+        &::after
+            content: " "
+            display: block
+            margin: 10px auto
+            height: 3px
+            width: 90px
+            background-color: #fff
+    .testimonials_wrapper
+        margin-top: 30px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        .testimonials_card
+            box-sizing: border-box
+            padding: 55px 0 10px 0
+            width: 485px
+            height: 200px
+            overflow: hidden
+            border: 1px #ffffff8b solid
+            display: flex
+            justify-content: flex-start
+            align-items: flex-start
+            >img
+                width: 90px
+            >div
+                box-sizing: border-box
+                width: calc(100% - 90px)
+                padding: 0 27px 0 20px
+                .testimonials_card_title
+                    text-transform: uppercase
+                    color: #fff
+                    font-weight: 500
+                    font-size: 16px
+                .testimonials_card_company
+                    margin-top: 8px
+                    font-size: 10px
+                    color: #dedcdb
+                    font-weight: 300
+                .testimonials_card_subtitle
+                    margin-top: 10px
+                    font-size: 12px
+                    color: #dedcdbd9
+                    line-height: 20px
+                    font-weight: 300
+            &:nth-child(2)
+                flex-direction: row-reverse
+                .testimonials_card_title
+                    text-align: right
+                .testimonials_card_company
+                    text-align: right
+                .testimonials_card_subtitle
+                    text-align: right         
+    .testimonials_nav_wrapper
+        margin-top: 55px
+        display: flex
+        justify-content: center
+        align-items: center
+        .testimonials_nav_item
+            height: 3px
+            width: 37px
+            margin: 15px 4px
+            background-color: #fff
+        .testimonials_nav_item_active
+            background-color: #139a81
+.sign
+    min-height: 300px
+    background-color: #fff
+    padding-top: 75px
+    .sign_title
+        text-align: center
+        font-weight: 700
+        font-size: 35px
+        color: #333333
+        &::after
+            content: " "
+            display: block
+            margin: 10px auto
+            height: 3px
+            width: 90px
+            background-color: #333333    
+    .sign_subtitle
+        width: 610px
+        margin: 0 auto
+        margin-top: 35px
+        text-align: center
+        line-height: 22px
+        font-size: 11px
+        font-weight: 400
+        color: #787878
+    .linear_wrapper
+        margin-top: 30px
+        display: flex
+        justify-content: center
+        align-items: center
+        >#mail
+            height: 40px
+            width: 500px
+            outline: 0
+            padding-left: 12px
+            border: 2px #139a81db solid
+            &::placeholder
+                color: #a3a3a3
+                font-weight: 400
+                font-size: 16px
+        >#submit
+            height: 45px
+            width: 150px
+            padding: 0
+            padding-top: 2px
+            border: none
+            border-radius: 1px
+            outline: none
+            color: #fff
+            background-color: #139a81
+            text-transform: uppercase
+            font-size: 13px
+            font-weight: 400
+            transition: .3s all
+            &:hover
+                background-color: #fff
+                color: #5b5b5b
+.footer
+    padding-top: 45px
+    min-height: 280px
+    background: url('../img/footer/footer_bg.jpg') center center/cover no-repeat
+    .columns_wrapper
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        flex-wrap: wrap
+        .footer_columns
+            width: 200px
+            &:nth-child(1)
+                .footer_logo
+                    a
+                        text-decoration: none
+                        color: #fff
+                        font-weight: 500
+                        font-size: 30px
+                .footer_subtitle
+                    margin-top: 14px
+                    font-size: 12px
+                    color: #dedcdbd9
+                    line-height: 20px
+                    font-weight: 300
+                .footer_social
+                    margin-top: 20px
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    flex-wrap: wrap   
+                    padding-right:  60px
+                    .footer_social_item
+                        background-color: #139a81
+                        height: 22px
+                        width: 22px 
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        border-radius: 100%
+                        transition: .3s all
+                        >a
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            text-decoration: none
+                            color: #fff
+                            font-size: 12px
+                            transition: .3s all
+                        &:hover
+                            background-color: #fff
+                            >a
+                               color: #139a81
+            &:nth-child(2)
+                .footer_contacts_title
+                    box-sizing: border-box
+                    padding-top: 13px
+                    font-weight: 500
+                    text-transform: uppercase
+                    font-size: 18px
+                    color: #fff
+                .footer_contacts_home
+                    margin-top: 14px
+                    >a
+                        color: #dedcdb
+                        text-decoration: none
+                        font-weight: 300
+                        font-size: 10px
+                        transition: .3s all
+                        &>i
+                            margin-right: 5px
+                        &:hover
+                            color: #16a086
+                .footer_contacts_mail
+                    margin-top: 5px
+                    >a
+                        color: #dedcdb
+                        text-decoration: none
+                        font-weight: 300
+                        font-size: 10px
+                        transition: 0.3s all
+                        &>i
+                            margin-right: 5px
+                        &:hover
+                            color: #16a086
+                .footer_contacts_phone
+                    margin-top: 10px
+                    >a
+                        display: block
+                        color: #dedcdb
+                        text-decoration: none
+                        font-weight: 300
+                        font-size: 10px
+                        transition: .3s all
+                        &:nth-child(2)
+                            margin-left: 18px
+                            margin-top: 5px
+                        &>i
+                            margin-right: 5px
+                        &:hover
+                            color: #16a086
+            &:nth-child(3)
+                .footer_company_title
+                    box-sizing: border-box
+                    padding-top: 13px
+                    font-weight: 500
+                    text-transform: uppercase
+                    font-size: 18px
+                    color: #fff
+                .list_wrapper
+                    margin-top: 0
+                    display: flex
+                    justify-content: flex-start
+                    >ul
+                        margin-left: 18px
+                        padding: 0
+                        &:nth-child(2)
+                            margin-left: 55px
+                        >li
+                            color: #dedcdb
+                            >a
+                                color: #dedcdb
+                                text-decoration: none
+                                font-weight: 300
+                                font-size: 10px
+                                transition: .3s all
+                                &:hover
+                                    color: #16a086   
+            &:nth-child(4)
+                .footer_gallery_title
+                    box-sizing: border-box
+                    padding-top: 13px
+                    font-weight: 500
+                    text-transform: uppercase
+                    font-size: 18px
+                    color: #fff
+                .gallery_wrapper
+                    margin-top: 25px
+                    width: 200px
+                    display: flex
+                    justify-content: space-between
+                    flex-wrap: wrap
+                    >a
+                        height: 63px
+                        display: block
+                        position: relative
+                        overflow: hidden
+                        &:hover
+                            >.mask
+                                top: 0
+                        >.mask
+                            transition: .1s all
+                            width: 63px
+                            height: 63px
+                            background-color: #16a0876e 
+                            position: absolute
+                            top: 100%
+                            z-index: 1
+                        >img
+                            width: 63px
+                            height: 63px
+                        &:nth-child(n+4)
+                            margin-top: 10px
+    .author_line
+        margin-top: 45px
+        padding-top: 19px
+        height: 35px
+        background-color: #05233b  
+        text-align: center
+        font-size: 12px
+        color: #dedcdbd9
+        font-weight: 300
+
+@media screen and (max-width: 1199px)
+    .container
+        width: 700px   
+    .header
+        .header_contacts
+            &_wrapper
+                .main_contacts
+                    width: 65%
+                    &_item>a
+                        font-size: 8px
+        .header_navigation
+            height: 70px
+            >i
+                top: 75px
+            .header_wrapper
+                .logo_img
+                    width: 85%
+                    &:hover
+                        width: 87%
+                .navbar
+                    width: 60%
+                    .navbar_menu
+                        .navbar_menu_item
+                            .navbar_menu_link
+                                font-size: 11px  
+    .services
+        .services_cards_wrapper
+            justify-content: center
+            flex-wrap: wrap
+            padding-bottom: 30px
+            .services_card
+                margin: 10px
+    .reasons 
+        .reasons_cards_wrapper
+            justify-content: center
+            flex-wrap: wrap
+            margin-top: 45px
+            padding-bottom: 30px
+            .reasons_card
+                margin: 10px      
+    .form
+        .form_line_wrapper
+            .form_title
+                font-size: 19px
+    .projects
+        padding-top: 80px
+        padding-bottom: 30px
+        .projects_cards_wrapper
+            justify-content: center
+            .project_card
+                margin: 10px
+    .numbers
+        height: 120px
+        .nums_wrapper
+            .nums_item
+                margin: 0 45px
+                margin-top: 25px
+                .num
+                    font-size: 35px
+                .num_subtitle
+                    font-size: 10px           
+    .news
+        padding-bottom: 30px
+        .news_cards_wrapper
+            justify-content: center
+            .news_card
+                margin: 10px
+    .testimonials
+        min-height: 620px
+        .testimonials_wrapper
+            margin-top: 30px
+            justify-content: center
+            align-items: center
+            flex-wrap: wrap
+            .testimonials_card
+                margin: 16px
+        .testimonials_nav_wrapper
+            margin-top: 12px
+            .testimonials_nav_item_active
+                background-color: #139a81            
+    .footer
+        .columns_wrapper
+            display: flex
+            justify-content: center
+            align-items: flex-start
+            flex-wrap: wrap
+            .footer_columns
+                margin: 20px
+@media screen and (max-width: 767px)              
+    .container
+        width: 450px
+    .partners
+        .partners_wrapper
+            justify-content: space-around
+    .sign  
+        .sign_subtitle
+            width: 400px
+    .form
+        padding-top: 47px
+        .form_line_wrapper
+            .form_title
+                font-size: 19px
+            .form_subtitle
+                font-size: 9px
+            input
+                height: 22px
+            select
+                margin-left: 17px
+    .promo
+        margin-top: 0px
+        min-height: 300px
+        padding-top: 100px
+        &_title
+            font-size: 37px
+        &_subtitle
+            margin-top: 20px
+            font-size: 22px
+        &_btn_wrapper
+            margin-top: 45px
+            flex-direction: column
+            align-items: center
+            .promo_project_btn
+                margin: 7px
+            .promo_more_btn
+                margin: 7px
+    .header
+        .header_contacts
+            &_wrapper
+                padding-top: 9px
+                display: flex
+                justify-content: space-between
+                align-items: center
+                .main_contacts
+                    width: 100%
+                    &_item
+                        >a
+                            font-size: 11px
+                        &:nth-child(1)
+                            display: none
+                .header_social
+                    display: none
+                    width: 10%
+                    justify-content: space-between
+                    align-items: center
+                    &_item>a
+                        color: #dedcdb
+                        text-decoration: none
+                        font-weight: 300
+                        font-size: 10px
+                        transition: 0.3s all
+                        &:hover
+                            color: #16a086
+        .header_navigation
+            top: -80vh
+            height: 80vh
+            .header_wrapper
+                flex-direction: column
+                justify-content: space-between
+                align-items: center
+                .logo_link
+                    margin-left: 10px
+                .navbar
+                    .navbar_menu
+                        padding: 0
+                        flex-direction: column
+                        justify-content: space-between
+                        align-items: center
+                        .navbar_menu_item
+                            margin: 5px 0
+                            .navbar_menu_link
+                                font-size: 13px
+@media screen and (max-width: 543px)
+    .container
+        width: 300px
+    .sign  
+        .sign_subtitle
+            width: 290px
+    .footer
+        .author_line
+            font-size: 10px
+    .form
+        padding-top: 47px
+        .form_line_wrapper
+            .form_title
+                font-size: 14px
+            .form_subtitle
+                font-size: 7px
+            input
+                height: 18px
+            select
+                height: 25px
+                margin-left: 30px
+            #submit
+                height: 25px
+    .numbers
+        height: 200px
+        .nums_wrapper
+            .nums_item
+                margin: 0 45px
+                margin-top: 25px
+                .num
+                    font-size: 35px
+                .num_subtitle
+                    font-size: 10px   
+    .testimonials
+        .testimonials_wrapper
+            .testimonials_card
+                padding-top: 20px
+                >div
+                    .testimonials_card_title
+                        font-size: 16px
+                    .testimonials_card_company
+                        margin-top: 8px
+                        font-size: 10px
+                    .testimonials_card_subtitle
+                        margin-top: 10px
+                        font-size: 10px             
+        .testimonials_nav_wrapper
+            margin-top: 12px
+    .header
+        .header_contacts
+            &_wrapper
+                .main_contacts
+                    &_item
+                        >a
+                            font-size: 8px
+    
