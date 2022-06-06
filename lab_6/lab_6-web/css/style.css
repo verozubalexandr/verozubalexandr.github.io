@@ -1,0 +1,173 @@
+a,
+button,
+div,
+h1,
+h2,
+h3,
+input,
+li,
+p,
+select,
+span,
+textarea {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ececec;
+    color: #414141;
+    z-index: 10;
+}
+
+.nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav ul li {
+    list-style: none;
+}
+
+.nav ul li span {
+    display: block;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav ul li span:hover {
+    background-color: #ffffff;
+    transition: 0.2s;
+}
+
+.nav ul li .menu {
+    display: block;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav ul li .menu:hover {
+    background-color: #ffffff;
+    transition: 0.2s;
+}
+
+.nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ececec;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.nav ul li .dropdown-content a {
+    color: #414141;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+.nav ul li .dropdown-content a:hover {
+    background-color: #ffffff;
+    transition: 0.3s;
+}
+
+.nav ul li .dropdown:hover .dropdown-content {
+    display: block;
+    transition: 0.3s;
+}
+
+html {
+    user-select: none;
+}
+
+.fullpage .section {
+    position: relative;
+    background-color: #000;
+}
+
+.fullpage .section.vis .content {
+    opacity: 1;
+    transform: none;
+}
+
+.fullpage .section .bg {
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.fullpage .section .content {
+    position: relative;
+    z-index: 9;
+}
+
+.fullpage .section .content .title {
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.fullpage .section .content .text {
+    line-height: 1.8;
+    color: #fff;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.fullpage #section2 .slide .bg {
+    width: 100vw;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.fullpage #section2 .slide #bg2 {
+    left: 100vw;
+}
+
+.fullpage #section2 .slide #bg3 {
+    left: 200vw;
+}
+
+.fp-controlArrow.fp-prev {
+    clip-path: polygon(25% 0, 10% 50%, 25% 100%, 25% 100%, 0% 50%, 25% 0%);
+    background-color: rgba(255, 255, 255, 0.646);
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    left: 30px;
+}
+
+.fp-controlArrow.fp-next {
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 75% 100%, 90% 50%, 75% 0);
+    background-color: rgba(255, 255, 255, 0.646);
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    right: 30px;
+}
