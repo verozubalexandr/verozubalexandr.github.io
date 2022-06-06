@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.8/fullpage.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.8/fullpage.js"></script>
+    <script defer src="js/index.js"></script>
+    <title>lab-6</title>
+</head>
+
+<body>
+
+    <div class="nav">
+        <ul>
+            <li>
+                <span data-section="first">First page slide</span>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <div class="menu">Slider menu</div>
+                    <div class="dropdown-content">
+                        <a href="#menu">Main slide(slider)</a>
+                        <a href="#menu/Slide2">Second slide(slider)</a>
+                        <a href="#menu/Slide3">Third slide(slider)</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span data-section="third">Third page slide</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="fullpage">
+
+        <div data-index="0" data-anchor="first" class="section">
+            <div class="bg" style="background-image: url(img/main_1.jpg)"></div>
+            <div class="content">
+                <h2 class="title">First slide</h2>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam saepe odio voluptate
+                    dolor cumque, rerum quis magnam non veniam molestias totam libero nobis at cupiditate rem incidunt
+                    necessitatibus quia tenetur.</p>
+            </div>
+        </div>
+
+        <div data-index="1" class="section" data-anchor="menu" id="section2">
+
+            <div class="slide" data-anchor="main">
+                <div class="bg" style="background-image: url(img/slide_1.jpg)"></div>
+                <div class="content">
+                    <h2 class="title">Main slide</h2>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, aliquid, cumque
+                        earum sint tenetur provident non similique corrupti quam doloribus mollitia ipsa tempore neque
+                        quisquam quasi magni sit. Tempora, iste.</p>
+                </div>
+            </div>
+
+            <div class="slide" data-anchor="Slide2">
+                <div class="bg" id="bg2" style="background-image: url(img/slide_2.jpg)"></div>
+                <div class="content">
+                    <h2 class="title">Slide 2</h2>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptate a aut
+                        harum cupiditate, cumque dolor optio ullam architecto omnis exercitationem debitis minima eius
+                        autem illum eos, molestiae amet voluptatem.</p>
+                </div>
+            </div>
+
+            <div class="slide" data-anchor="Slide3">
+                <div class="bg" id="bg3" style="background-image: url(img/slide_3.jpg) "></div>
+                <div class="content">
+                    <h2 class="title">Slide 3</h2>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi optio eligendi
+                        sapiente deleniti earum dolorum voluptatum modi ab nam voluptates quia esse laborum quos autem,
+                        velit itaque in, sunt nisi?</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div data-index="2" data-anchor="third" class="section">
+            <div class="bg" style="background-image: url(img/main_3.jpg)"></div>
+            <div class="content">
+                <h2 class="title">Third slide</h2>
+                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In voluptatum consequuntur
+                    error natus libero doloribus iste neque consectetur cupiditate cumque. Sequi nesciunt sapiente,
+                    earum quis adipisci molestiae. Quae, blanditiis eius!</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
