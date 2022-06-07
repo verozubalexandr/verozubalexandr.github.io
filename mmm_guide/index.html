@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="Image/x-icon" href="img/logo.ico" rel="icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="js/smooth_scroll.js"></script>
+    <script defer src="https://kit.fontawesome.com/a5bc710454.js" crossorigin="anonymous"></script>
+    <title>Guide</title>
+</head>
+
+<body>
+    <h1 class="title title-main" id="top">MMM WebApp (Admin Guide)</h1>
+    <nav class="nav-section">
+        <img src="img/logo.png" alt="logo" class="logo">
+        <ul>
+            <li>
+                <a href="#login">Логин и пароль</a>
+            </li>
+            <li>
+                <a href="#admin-main-page">Главная страница</a>
+            </li>
+            <li>
+                <a href="#search">Поиск</a>
+            </li>
+            <li>
+                <a href="#delete">Удаление</a>
+            </li>
+            <li>
+                <a href="#edit">Редактирование</a>
+            </li>
+            <li>
+                <a href="#add-contributor">Добавление</a>
+            </li>
+        </ul>
+    </nav>
+    <section id="login">
+        <h2 class="title">ЛОГИН И ПАРОЛЬ</h2>
+        <p class="text-main">
+            Для входа на сайт администрирования базы данных переходим по ссылке, <a
+                href="http://localhost:8080">http://localhost:8080</a> , предварительно запустив приложение, вводим
+            следующие данные и нажимаем кнопку “Sign in” (см. рис. 1) : <br><br>
+            username: admin
+            <br>
+            password: 123456
+        </p>
+        <img src="/img/1.png" alt="">
+        <p class="photo-subt">рис. 1</p>
+    </section>
+    <section id="admin-main-page">
+        <h2 class="title">ГЛАВНАЯ СТРАНИЦА</h2>
+        <p class="text-main">
+            После входа в аккаунт, мы попадаем на главную страницу администратора.
+            Основные функции показаны на рисунке ниже. (см. рис. 2)
+        </p>
+        <img src="/img/2.png" alt="">
+        <p class="photo-subt">рис. 2</p>
+    </section>
+    <section id="add-contributor">
+        <h2 class="title">ДОБАВЛЕНИЕ ИНФОРМАЦИИ О ВКЛАДЧИКЕ</h2>
+        <p class="text-main">
+            После нажатия на кнопку добавления, мы переходим на страницу, которая содержит в себе поля для заполнения.
+            После заполнения нажимаем кнопку “SAVE”, для отмены - кнопку “Home”. Подтверждаем ознакомление со статусом
+            выполнения задачи (см. рис. 3, 4, 5).
+        </p>
+        <img src="img/3.png" alt="">
+        <p class="photo-subt">рис. 3</p>
+        <img src="img/4.png" alt="">
+        <p class="photo-subt">рис. 4</p>
+        <img src="img/5.png" alt="">
+        <p class="photo-subt">рис. 5</p>
+        <p class="text-main">
+            * При незаполнении поля, или неверном заполнении поля, содержащего строковые данные, они автоматически
+            заполняются как “---”. Полям с числовыми данными, в случае незаполнения, или неверного заполнения
+            присваивается значение -1. <br>
+            * Номер дома, квартиры - целое неотрицательное число <br>
+            * Депозит - положительное число (разделитель целой и дробной части - точка) <br>
+            * Номер договора - строка, содержащая только цифры в количестве от 3 до 15 <br>
+            * Срок - целое положительное число(количество месяцев)
+        </p>
+    </section>
+    <section id="search">
+        <h2 class="title">ПОИСК ПО БАЗЕ ДАННЫХ</h2>
+        <p class="text-main">
+            После перехода на страницу поиска, мы можем выбрать поле, по которому будет проводиться поиск. После чего
+            выбираем режим поиска.
+            <br>
+            <br>
+            Реализован поиск по фамилии (не учитывая регистр), поиск по вкладчикам, депозит которых - больше заданного
+            депозита (разделитель целой и дробной части - точка или запятая), поиск по вкладчикам, срок заключения
+            договоров которых - больше заданного срока (в месяцах, целое положительное, отличное от нуля число). (см.
+            рис. 6)
+        </p>
+        <img src="img/6.png" alt="">
+        <p class="photo-subt">рис. 6</p>
+        <p class="text-main">
+            Также внизу есть кнопка перехода на домашнюю страницу, и кнопка
+            выхода из аккаунта. Если найдены совпадения, можно нажать кнопку “info”, и нам откроется полная информация о
+            вкладчике. (см. рис. 7)
+        </p>
+        <img src="img/7.png" alt="">
+        <p class="photo-subt">рис. 7</p>
+    </section>
+    <section id="delete">
+        <h2 class="title">УДАЛЕНИЕ</h2>
+        <p class="text-main">
+            Для удаления вкладчика из базы данных, необходимо открыть полную информацию о нем (показано в части
+            “ПОИСК”). <br>
+            Далее нажать кнопку “Delete”. <br>
+            В открывшемся модальном окне подтверждаем намерения удалить запись. Готово! (Шаги продемонстрированы на
+            рисунках 8, 9, 10)
+        </p>
+        <img src="img/8.png" alt="">
+        <p class="photo-subt">рис. 8</p>
+        <img src="img/9.png" alt="">
+        <p class="photo-subt">рис. 9</p>
+        <img src="img/10.png" alt="">
+        <p class="photo-subt">рис. 10</p>
+    </section>
+    <section id="edit">
+        <h2 class="title">РЕДАКТИРОВАНИЕ ИНФОРМАЦИИ</h2>
+        <p class="text-main">
+            Редактирование информации о пользователе осуществляется в начальном этапе, как и удаление, только с нажатием
+            кнопки “EDIT”. Далее мы переходим на страницу, в которой редактируем нужную информацию, по правилам
+            добавления (Показано в части “ДОБАВЛЕНИЕ”).
+        </p>
+    </section>
+    <div class="top-btn">
+        <a href="#top">
+            <i class="fa-solid fa-chevron-up"></i>
+        </a>
+    </div>
+    <div class="not-support">
+        Sorry, but this is only for large devices
+        <span class="fa-solid fa-ban"></span>
+    </div>
+</body>
+
+</html>
