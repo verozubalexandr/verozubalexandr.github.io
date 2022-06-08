@@ -18,6 +18,11 @@ body {
     position: relative;
 }
 
+.container {
+    width: 94%;
+    margin: 0 auto;
+}
+
 .title {
     font-size: 38px;
     padding: 0;
