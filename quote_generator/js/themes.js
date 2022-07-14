@@ -25,7 +25,7 @@ function changeToLightTheme() {
 
 function changeToDarkTheme() {
   $themeLink.href = "css/dark-theme.css";
-  $mainSection.style.background = "url('../../quote_generatorimg/dark-bg" + randomIntegerNumber(1, 3) + ".jpg') center center/cover no-repeat";
+  $mainSection.style.background = "url('../../quote_generator/img/dark-bg" + randomIntegerNumber(1, 3) + ".jpg') center center/cover no-repeat";
 } 
 
 function randomIntegerNumber(min, max) {
