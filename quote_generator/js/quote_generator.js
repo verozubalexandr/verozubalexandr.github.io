@@ -6,7 +6,7 @@ const $quoteAuthor 	= document.querySelector('#quote-author');
 let quote 			= '';
 let author 			= '';
 let text 			= '';
-let firstTaskFlag	= false;
+let firstTaskFlag	        = false;
 
 //************GETTING DATA****************//
 fetch('https://api.goprogram.ai/inspiration', { method: 'GET' })
