@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worklog App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Календар робочих годин за:</h2>
+        <select id="monthSelect" onchange="renderShifts()"></select>
+
+        <section class="add-shift-section">
+            <h2>Нова зміна:</h2>
+            <input type="date" class="date-input" id="date">
+            <div class="time-input-wrapper">
+                <input type="text" class="time-input" id="start" placeholder="__:__" maxlength="5" oninput="maskTime(this)" title="HH:MM">
+                <span>-</span>
+                <input type="text" class="time-input" id="end" placeholder="__:__" maxlength="5" oninput="maskTime(this)" title="HH:MM">
+            </div>   
+            <button class="add-shift-btn" onclick="addShift()">Додати</button>
+        </section>
+        
+        <section class="stats-section">
+            <h2>Статистика</h2>
+            <p><strong>Всього за цей місяць:</strong> <span id="totalHours">0</span> годин.</p>
+            <table>
+                <thead>
+                    <tr><th>Дата</th><th>Початок</th><th>Кінець</th><th>Години</th><th>Видалити</th></tr>
+                </thead>
+                <tbody id="shiftTable"></tbody>
+            </table>
+        </section>
+
+        <section class="backup-section">
+            <h2>Збереження і відновлення (ОБЕРЕЖНО)</h2>
+            <button class="backup-btn" onclick="backupShifts()">Зберегти як файл</button>
+            <input class="load-file-input" type="file" id="restoreInput" style="display:none" onchange="restoreShifts(event)">
+            <button class="backup-btn" onclick="document.getElementById('restoreInput').click()">Відновити з файлу</button>
+        </section>
+    </div>
+   <script src="js/script.js"></script>
+</body>
+</html>
