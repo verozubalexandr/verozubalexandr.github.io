@@ -1,0 +1,156 @@
+body { font-family: Arial, sans-serif; text-align: center; }
+.container { max-width: 350px; margin: auto; padding: 20px; }
+input, button, select { margin: 5px; padding: 10px; width: 100%; }
+table { width: 100%; margin-top: 10px; border-collapse: collapse; }
+th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+.invalid { border: 2px solid red; }
+
+* {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+}
+
+body {
+    background-color: #18191a;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 25px;
+    color: #ffffff;
+}
+
+#monthSelect {
+    display: block;
+    outline: none;
+    background-color: #ffffff00;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    height: 60px;
+    width: 165px;
+    margin: 15px auto;
+    font-size: 17px;
+    color: #ffffff;
+}
+
+.time-input-wrapper {
+    margin: 0 auto;
+    width: 300px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.time-input {
+    padding: 7px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+}
+
+.date-input {
+    width: 187px;
+    height: 33px;
+    padding: 7px;
+    text-align: center;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+.add-shift-section {
+    margin-top: 50px;
+    width: 100%;
+    height: 250px;
+}
+
+.add-shift-btn {
+    margin-top: 20px;
+    width: 200px;
+    height: 48px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-size: 20px;
+    outline: none;
+    background-color: #ffffff;
+    border: none;
+    transition: .3s all;
+}
+
+.add-shift-btn:hover {
+    transform: scale(1.05);
+}
+
+.add-shift-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff51;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.add-shift-btn:focus {
+    background-color: #ffffff51;
+    outline: none;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.stats-section {
+    margin-top: 40px;
+}
+
+th {
+    font-size: 10px;
+}
+
+.delete-shift-btn {
+    display: block;
+    margin: 0 auto;
+    background-color: #ffffff00;
+    outline: none;
+    border: none;
+}
+
+.backup-btn {
+    width: 110px;
+    height: 48px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-size: 10px;
+    outline: none;
+    background-color: #ffffff;
+    border: none;
+    transition: .3s all;
+}
+
+.backup-section {
+    margin-top: 200px;
+}
+
+.backup-btn:hover {
+    transform: scale(1.05);
+}
+
+.backup-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff51;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.backup-btn:focus {
+    background-color: #ffffff51;
+    outline: none;
+    color: #fff;
+    border: 1px solid #fff;
+}
