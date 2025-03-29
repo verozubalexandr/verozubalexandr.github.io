@@ -31,43 +31,54 @@ function updateMonthDropdown() {
     monthSelect.value = currentMonth;
 }
 
-
 function maskTime(input) {
-    input.value = input.value.replace(/[^0-9:]/g, "");
-    if (input.value.length === 2 && !input.value.includes(":")) {
-        input.value += ":";
-    }
-    if (/^([01]\d|2[0-3]):[0-5]\d$/.test(input.value)) {
-        input.classList.remove('invalid');
+    let value = input.value.replace(/\D/g, ""); 
+    if (value.length > 4) value = value.slice(0, 4);
+
+    if (value.length >= 3) {
+        input.value = value.slice(0, 2) + ":" + value.slice(2);
     } else {
-        input.classList.add('invalid');
+        input.value = value;
+    }
+
+    if (/^([01]\d|2[0-3]):[0-5]\d$/.test(input.value)) {
+        input.classList.remove("invalid");
+    } else {
+        input.classList.add("invalid");
     }
 }
 
 function addShift() {
-    let date = document.getElementById('date').value;
-    let start = document.getElementById('start').value;
-    let end = document.getElementById('end').value;
+    let date = document.getElementById("date").value;
+    let start = document.getElementById("start").value;
+    let end = document.getElementById("end").value;
     let timePattern = /^([01]\d|2[0-3]):[0-5]\d$/;
-    if (!date || !start || !end) return alert('Заповніть всі поля!');
-    if (!timePattern.test(start) || !timePattern.test(end)) return alert('Введіть час в форматі HH:MM!');
-    
+
+    if (!date || !start || !end) return alert("Заповніть всі поля!");
+    if (!timePattern.test(start) || !timePattern.test(end)) return alert("Введіть час в форматі HH:MM!");
+
     let startTime = new Date(`${date}T${start}:00`);
     let endTime = new Date(`${date}T${end}:00`);
-    if (endTime <= startTime) return alert('Час закінчення має бути пізніше часу початку!');
-    
+    if (endTime <= startTime) return alert("Час закінчення має бути пізніше часу початку!");
+
     let hours = (endTime - startTime) / 3600000;
     let monthKey = date.slice(0, 7);
+    let selectedMonth = document.getElementById("monthSelect").value;
 
     if (!shifts[monthKey]) {
         shifts[monthKey] = [];
     }
 
     shifts[monthKey].push({ date, start, end, hours });
-    localStorage.setItem('shifts', JSON.stringify(shifts));
+    localStorage.setItem("shifts", JSON.stringify(shifts));
 
     updateMonthDropdown();
+    document.getElementById("monthSelect").value = selectedMonth;
     renderShifts();
+
+    document.getElementById("date").value = "";
+    document.getElementById("start").value = "";
+    document.getElementById("end").value = "";
 }
 
 function deleteShift(index) {
